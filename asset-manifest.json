@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hiot/static/css/main.7acaea2f.css",
+    "main.js": "/hiot/static/js/main.07d3183d.js",
+    "index.html": "/hiot/index.html",
+    "main.7acaea2f.css.map": "/hiot/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/hiot/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
