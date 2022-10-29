@@ -1,16 +1,13 @@
+import { Route, Routes } from 'react-router-dom';
+
+import MainPage from 'pages/MainPage/MainPage';
+import PlayingPage from 'pages/PlayingPage/PlayingPage';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/playing-page" element={<PlayingPage />} />
+    </Routes>
   );
 };
