@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 
-const wordBg = ({ isMensTeamPlaying, isHidden }) => {
+const wordBg = ({ isMensTeamPlaying, isHidden, isTypingAnswer }) => {
   // return p.isMensTeamPlaying ? 'blue' : 'pink';
   if (isMensTeamPlaying) {
+    if (isTypingAnswer) {
+      return 'rgba(2, 0, 255, 0.8)';
+    }
     if (isHidden) {
       return 'rgba(2, 0, 255, 0.8)';
     }
     return 'rgba(68, 67, 225, 0.8)';
   } else {
+    if (isTypingAnswer) {
+      return 'rgba(255, 0, 210, 0.8)';
+    }
+
     if (isHidden) {
       return 'rgba(255, 0, 210, 0.8)';
     }
@@ -21,7 +28,7 @@ export const WordBtn = styled.button`
   justify-content: center;
   font-size: 18px;
 
-  width: 100px;
+  width: 150px;
   height: 50px;
 
   color: white;
@@ -37,7 +44,7 @@ export const WordContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 100px;
+  width: 150px;
   height: 50px;
   :not(:first-child) {
     margin-top: 5px;
@@ -54,12 +61,20 @@ export const Word = styled.p`
 `;
 
 export const Input = styled.input`
-  width: 100px;
+  width: 150px;
   height: 50px;
   margin: 0;
   padding: 0;
-  background-color: rgba(247, 2, 2, 0.8);
+  /* padding-left: 20px; */
+  background-color: ${p =>
+    p.isMensTeamPlaying ? 'rgba(68, 67, 225, 0.8)' : 'rgba(232, 93, 237, 0.8)'};
   text-align: center;
   font-size: 18px;
   border: none;
+
+  ::placeholder {
+    padding-right: 8px;
+    margin: 0;
+  }
 `;
+// 'rgba(68, 67, 225, 0.8)'
